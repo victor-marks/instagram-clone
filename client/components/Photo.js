@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
-class Photo extends React.Component {
+class Photo extends Component {
   render() {
     const { post, index, comments } = this.props;
 
@@ -33,7 +33,7 @@ class Photo extends React.Component {
 
           <div className="control-buttons">
             <button
-              // onClick={this.props.incrementLikes.bind(null, index)}
+              onClick={this.props.incrementLikes.bind(null, index)}
               className="likes"
             >
               &hearts; {post.likes}
