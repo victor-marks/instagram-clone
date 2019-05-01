@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
+import { incrementLikes } from '../actions/actionCreators';
 
 class Photo extends Component {
   render() {

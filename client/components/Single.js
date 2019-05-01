@@ -5,13 +5,13 @@ import Comments from './Comments';
 class Single extends Component {
   render() {
     const { postId } = this.props.params;
-    const i = this.props.posts.findIndex(post => post.code === postId);
-    const post = this.props.posts[i];
+    const index = this.props.posts.findIndex(post => post.code === postId);
+    const post = this.props.posts[index];
     const postComments = this.props.comments[postId] || [];
 
     return (
       <div className="single-photo">
-        <Photo i={i} post={post} {...this.props} />
+        <Photo index={index} post={post} {...this.props} />
         <Comments postComments={postComments} {...this.props} />
       </div>
     );
